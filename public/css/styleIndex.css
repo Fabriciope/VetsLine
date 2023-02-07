@@ -322,13 +322,39 @@ section.sobre_nos div.box_sobre_nos p{
 footer{
     width: 100%;
     background: #ffcc00;
-    height: 200px;
+    padding: 15px 0;
 }
-footer div{
+footer div.center{
     width: 80%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
+footer div.center div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 18   px;
+}
+footer div.center div ul{
+    list-style: none;
+}
+footer div.center div ul h4{
+    font-size: 1.54rem;
+}
+footer div.center div ul a{
+    font-size: 1.4rem;
+    color: #1c1c1c;
+    text-decoration: none;
+}
+footer div.center div ul a:hover{
+    text-decoration: underline;
+}
+footer div.center p{
+    font-size: 1.5rem;
+    font-weight: 1000;
+}
 @media(max-width: 1280px){
     html{
         font-size: 59%;
