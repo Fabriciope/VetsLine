@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/relatarProblema2.css">
+    <title>Relatar problema</title>
+</head>
+<body>
+    <main>
+        <h3>Caso o seu problema seja emergencial, entre em contato conosco ligando para (11) 99999-9999</h3>
+        <h1>Relatar probelema</h1>
+        <form action="/registrar-relato" method="post">
+            <div>
+                <div class="box_nivel_problema">
+                    <label for="nivel_problema">Selecione o nivel do problema do seu pet</label>
+                    <select name="nivel" id="nivel_problema">
+                        <option selected>Nível do problema</option>
+                        <option value="leve">Leve</option>
+                        <option value="grave">Grave</option>
+                        <option disabled>Muito grave</option>
+                    </select>
+                </div>
+                <div class="box_pet">
+                    <label for="pet">qual é o seu pet?</label>
+                    <select name="animal" id="pet">
+                        <option selected>selecione a espécie</option>
+                        <option value="cachorro">Cachorro</option>
+                        <option value="gato">Gato</option>
+                        <option value="ave">Ave</option>
+                        <option value="hamster">Hamster</option>
+                        <option value="coelho">Coelho</option>
+                        <option value="tartaruga">Tartaruga</option>
+                        <option value="porquinho_da_india">Porquinho-da-índia</option>
+                        <option value="furao">Furão</option>
+                    </select>
+                </div>
+                <div class="box_relato">
+                    <label for="relato">Escreva qual é o problema</label>
+                    <textarea name="relato" id="relato" placeholder="descreva aqui a raça do seu pet e o problema..." rows="10"></textarea>
+                </div>
+                <?php
+                if(isset($this->view->erro) && $this->view->erro == 'campos_incorretos'){?>
+                <small> *Preencha todos os campos</small>
+                <?php } ?>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+
+    </main>
+</body>
+</html>

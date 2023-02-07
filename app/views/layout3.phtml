@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo-Vetsline2.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/d5c56409b7.js" crossorigin="anonymous"></script>
+    <?php
+    if($this->view->page == 'viewRelatos' || $this->view->page == 'dashboard'){?>
+        <link rel="stylesheet" href="css/styleRelatos.css">
+   <?php }else if($this->view->page == 'perfil' || $this->view->page == 'perfilAdmin'){?>
+    <link rel="stylesheet" href="css/stylePerfil.css">
+    <?php }else if($this->view->page == 'veterinarios') {?>
+        <link rel="stylesheet" href="css/styleVeterinarios.css">
+        <?php } ?>
+    <link rel="stylesheet" href="css/styleLayout3.css">
+    <link rel="stylesheet" href="css/styleIndex.css">
+    <title>VetsLine</title>
+</head>
+<body id="body">
+   <header id="header">
+    <div class="center_header">
+        <i id="menu" class="fas fa-bars"></i>
+        
+        <h1>
+            <img src="img/VetsLine.png" alt="">
+        </h1>
+        <ul id="ul_nav">
+            <li id="x"><i class="fas fa-times"></i></li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/sobre-nos">Sobre nós</a></li>
+            <li><a href="/contato">Contato</a></li>
+        </ul>
+        <div class="container_btn_login">
+            <div class="nome_user">
+                <?php
+                if(isset($_SESSION['nome'])){?>
+                    <p>Olá</p>
+                    <p><?=ucfirst($_SESSION['nome'])?></p>
+               <?php }?>
+            </div>
+            <div id="btn_perfil">
+                <i class="user fas fa-user-circle"></i>
+                <i class="arrow fas fa-angle-down"></i>
+           </div>
+            <ul id="ul_perfil">
+                <li> <a href="/sair">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+   </header>
+    <section class="view_relatos">
+        <div class="center">
+            <aside>
+                <ul>
+                    <?php if(isset($_SESSION['nivel']) && $_SESSION['nivel'] == 3){?>
+                            <li><a href="/page-dashboard">Relatos pendentes</a></li>
+                            <li><a href="/veterinarios">Veterinários</a></li>
+                            <li><a href="/perfil-admin">Meu perfil</a></li>
+
+                    <?php }else if(isset($_SESSION['nivel']) && $_SESSION['nivel'] == 2){ ?>
+                        <li><a href="/page-dashboard">Relatos pendentes</a></li>
+                        <li><a href="/perfil-admin">Meu perfil</a></li>
+                        <?php }else{?>
+                        <li><a href="/view-relatos">Relatos</a></li>
+                            <li><a href="/perfil">Meu perfil</a></li>
+                        <?php } ?>
+                </ul>
+            </aside>
+            
+            <?php
+            $this->content();
+            ?>
+            
+        </div>
+    </section>
+   
+   <script src="/js/scriptsIndex.js"></script>
+   </body>
+</html>

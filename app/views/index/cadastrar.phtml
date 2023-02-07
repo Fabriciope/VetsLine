@@ -1,0 +1,24 @@
+
+        <form style="width: 450px;" action="/registrar" method="post">
+            
+              <h2 >Cadastrar</h2>
+                <input class="sem_olho" type="text" name="nome" value="<?=$this->view->dadosUsuarioErro['nome']?>" placeholder="Nome">
+                <input class="sem_olho" type="email" name="email" value="<?=$this->view->dadosUsuarioErro['email']?>"  placeholder="E-mail">
+                <div>
+                    <input id="senha" type="password" name="senha" value="<?=$this->view->dadosUsuarioErro['senha']?>"  placeholder="Senha">
+                    <i onclick="verSenha()" id="aberto_senha" class="aberto fas fa-eye"></i>
+                    <i onclick="esconderSenha()" id="fechado_senha" class="fas fa-eye-slash"></i>
+                </div>
+                <div class="bottom">
+                    <input id="confirmacao_senha" type="password" name="confirmacao_senha" value="<?=$this->view->dadosUsuarioErro['confirmacao_senha']?>"  placeholder="Confirme sua Senha">
+                    <i onclick="verConfirmacaoSenha()" id="aberto_confirmacao_senha" class="aberto fas fa-eye"></i>
+                    <i onclick="esconderConfirmacaoSenha()"  id="fechado_confirmacao_senha" class=" fas fa-eye-slash"></i>
+                </div>
+                <?php
+                if($this->view->erroCadastro){?>
+                <small><?=$this->view->erroCadastro?></small>
+                <?php }?>
+                <button type="submit">Cadastrar</button>
+                <p>Já é cadastrado? <a href="/entrar">Entrar</a></p>
+        </form>
+   

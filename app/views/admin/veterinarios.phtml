@@ -1,0 +1,39 @@
+<div class="box_veterinarios">
+    <div class="center">
+        <h2>Veterinarios Cadastrados</h2>
+        <a class="add_vet" href="/add-vet">Adicionar Veterinario</a>
+        <div class="veterinarios">
+        <?php
+         foreach($this->view->veterinarios as $veterinario){?>
+            <div class="box_info_vet">
+                <div class="info_vet">
+                
+                    <div>
+                        <h3>Nome: </h3>
+                        <p><?=$veterinario['nome']?></p>
+                    </div>
+                    <div>
+                        <h3>Email: </h3>
+                        <p><?=$veterinario['email']?></p>
+                    </div>
+                    <div>
+                        <h3>Senha: </h3>
+                        <p><?=$veterinario['senha']?></p>
+                    </div>
+                </div>
+                <button onclick="viewPrompt()">Remover</button>
+                <div id="prompt">
+                    <h3>Tem certeza que deseja remover:</h3>
+                    <p><?=$veterinario['nome']?></p>
+                    <div >
+                        <a class="voltar" href="veterinarios">Voltar</a>
+                        <a class="sim" href="remover-vet?id-vet=<?=$veterinario['id']?>">Sim</a>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+<script src="js/confirmacaoRemover.js"></script>

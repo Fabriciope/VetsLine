@@ -1,0 +1,38 @@
+<div class="box_relatos">
+    <div class="center">
+        <h2>Relatos pendentes</h2>
+        <div class="box_todos_relatos">
+            <?php
+            foreach($this->view->relatosPendentes as $relato){
+                if(empty($relato['resposta'])){?>
+            
+                <div class="box_info_relato">
+                    <div>
+                        <h3>Nível do problema: </h3><p><?=$relato['nivel']?></p>
+                    </div>
+                    <hr>
+                    <div>
+                        <h3>Animal: </h3><p><?=$relato['animal']?></p>
+                    </div>
+                    <hr>
+                    <div class="D">
+                        <h3>Descrição do problema: </h3><p><?=$relato['relato']?></p>
+                    </div>
+                    <hr>
+                    <div class="R">
+                        <h3>Resposta:</h3>
+                        <form action="/enviar-resposta?id-relato=<?=$relato['id']?>" method="post">
+                            <textarea name="resposta" placeholder="Escreva sua resposta aqui..."></textarea>
+                            <button type="submit">Responder</button>
+                        </form>
+                    </div>
+                    <!-- <form action="/remover-relato" method="post">
+                        <div class="btn_remover">
+                            <button type="submit" name="id" value="<?=$relato['id']?>">Remover</button>
+                        </div>
+                    </form> -->
+                </div>
+            <?php } }?>
+        </div>
+    </div>
+</div>

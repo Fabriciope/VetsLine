@@ -1,0 +1,16 @@
+<form style="width: 450px;" action="/autenticar?page=relatar-problema1" method="post">
+            <h3>Caso o seu problema seja emergencial, entre em contato conosco ligando para (11) 99999-9999</h3>
+            <h2 style="font-size: 2.4rem;">Entre na sua conta antes de continuar</h2>
+        <input class="sem_olho" type="email" name="email" placeholder="E-mail">
+        <div style="margin-bottom: 15px;">
+            <input id="senha" type="password" name="senha"   placeholder="Senha">
+            <i onclick="verSenha()" id="aberto_senha" class="aberto fas fa-eye"></i>
+            <i onclick="esconderSenha()" id="fechado_senha" class="fas fa-eye-slash"></i>
+        </div>
+        <?php
+        if(isset($_GET['login']) && $_GET['login'] == 'erro-entrar'){?>
+        <small>*Erro ao entrar, verifique se os campos foram preenchidos corretamente</small>
+        <?php }?>
+        <button type="submit">Entrar</button>
+        <p>Ainda não possui um cadastro? <a href="/cadastrar">Cadastrar</a></p>
+</form> 

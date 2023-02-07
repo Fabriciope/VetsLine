@@ -1,0 +1,20 @@
+<form style="width: 450px;" action="<?php if($this->view->entrar == 'usuario'){
+                                             echo '/autenticar';
+                                            }else if($this->view->entrar == 'admin'){
+                                                echo '/autenticar-admin';
+                                            }
+                                   ?>" method="post">
+    <h2 >Entrar</h2>
+        <input class="sem_olho" type="email" name="email"  placeholder="E-mail">
+        <div style="margin-bottom: 15px;">
+            <input id="senha" type="password" name="senha"   placeholder="Senha">
+            <i onclick="verSenha()" id="aberto_senha" class="aberto fas fa-eye"></i>
+            <i onclick="esconderSenha()" id="fechado_senha" class="fas fa-eye-slash"></i>
+        </div>
+        <?php
+        if(isset($_GET['login']) && $_GET['login'] == 'erro-entrar'){?>
+        <small>*Erro ao entrar, verifique se os campos foram preenchidos corretamente</small>
+        <?php }?>
+        <button type="submit">Entrar</button>
+        <p>Ainda não possui um cadastro? <a href="/cadastrar">Cadastrar</a></p>
+</form>

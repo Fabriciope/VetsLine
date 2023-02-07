@@ -1,0 +1,30 @@
+div.box_perfil{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+div.box_perfil div.center_perfil{
+    width: 60%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: white;
+    border-radius: 7px;
+    padding: 20px;
+    box-shadow: 3px 3px 13px rgb(0, 0, 0, .3);
+}
+div.box_perfil div.center_perfil div{
+    width: 100%;
+    margin-bottom: 15px;
+}
+div.box_perfil div.center_perfil div h2{
+    text-align: center;
+    font-size: 1.85rem;
+}
+div.box_perfil div.center_perfil div p{
+    text-align: center;
+    font-size: 2rem;
+}

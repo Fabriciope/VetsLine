@@ -1,0 +1,109 @@
+@font-face {
+    font-family: tomy;
+    src: url(MADETOMMY.woff);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: tomy;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f2f2f2;
+}
+main{
+    background: white;
+    width: 450px;
+    padding: 20px;
+    border-radius: 7px;
+    box-shadow: 4px 4px 15px rgb(0, 0, 0, .2);
+}
+main h3{
+    color: red;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    text-align: center;
+}
+main h1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 23px
+}
+
+div.box_nivel_problema {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px
+}
+div.box_nivel_problema label{
+    font-size: 1.8rem;
+    margin-bottom: 8px
+}
+ div.box_nivel_problema select{
+    width: 200px;
+    font-size: 1.5rem;
+    padding: 5px 6px;
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+}
+
+div.box_pet{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px
+}
+div.box_pet label{
+    font-size: 1.8rem;
+    margin-bottom: 8px
+}
+div.box_pet select{
+    width: 200px;
+    font-size: 1.5rem;
+    padding: 5px 6px;
+    border-radius: 7px;
+    cursor: pointer;
+    outline: none;
+}
+
+div.box_relato{
+    display: flex;
+    flex-direction: column;
+}
+div.box_relato label{
+    font-size: 1.8rem;
+    margin-bottom: 8px
+}
+div.box_relato textarea{
+    width: 100%;
+    resize: vertical;
+    border-radius: 7px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 7px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+small{
+    color: red;
+    font-size: 1.45rem;
+    margin-bottom: 20px;
+}
+button{
+    background: #ffb600;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.7rem;
+    padding: 8px 0;
+    width: 100%;
+    margin-top: 22px;
+    color: #0f0b01;
+    box-shadow: inset -2px -2px 10px rgb(0, 0, 0, .2);
+    cursor: pointer;
+}
