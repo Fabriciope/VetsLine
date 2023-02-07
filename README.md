@@ -13,7 +13,7 @@ Este é um projeto feito para uma empresa fictía, que seria um veterinario 24h,
 #### Conhecimentos aplicados:
 ##### Front-End:
 * Site responsivo, usando HTML, CSS, JavaScript.
-#### Back-End:
+##### Back-End:
 * Site bem estruturado, usando o padrão de arquitetura MVC.
 * Ações de CRUD ao banco de dados no MySQL, utilizando o PDO no PHP (o SGBD usado foi o phpMyAdmin).
 * codigos orientados à objetos.
