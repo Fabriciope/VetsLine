@@ -46,7 +46,7 @@ class AdminController extends Action{
         $admin= Container::getModel('admin');
         $admin->__set('nome', $_POST['nome']);
         $admin->__set('email', $_POST['email']);
-        $admin->__set('senha', $_POST['senha']);
+        $admin->__set('senha', md5($_POST['senha']));
 
         $validado= $admin->validarVet();
 

@@ -24,7 +24,7 @@ class Usuario extends Model{
             $validado = false;
         }else  if(mb_strlen($this->__get('senha'), 'UTF-8') < 3){
             $validado = false;
-        }else  if($_POST['confirmacao_senha'] != $this->__get('senha')){
+        }else  if(md5($_POST['confirmacao_senha']) != $this->__get('senha')){
             $validado = false;
         }
         

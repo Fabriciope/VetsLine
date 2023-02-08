@@ -9,7 +9,7 @@ class AuthController extends Action{
     public function autenticar(){
         $usuario = Container::getModel('usuario');
         $usuario->__set('email', $_POST['email']);
-        $usuario->__set('senha', $_POST['senha']);
+        $usuario->__set('senha', md5($_POST['senha']));
         $user= $usuario->autenticar();
         
         if(isset($_GET) && $_GET['page'] == 'relatar-problema1'){
@@ -41,7 +41,7 @@ class AuthController extends Action{
     public function autenticarAdmin(){
         $usuario = Container::getModel('Admin');
         $usuario->__set('email', $_POST['email']);
-        $usuario->__set('senha', $_POST['senha']);
+        $usuario->__set('senha', md5($_POST['senha']));
         $user= $usuario->autenticarAdmin();
         if(!empty($user['id']) && !empty($user['nome'])){
             if($user['id'] == 1){

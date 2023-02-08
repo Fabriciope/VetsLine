@@ -76,7 +76,7 @@ class Route extends Bootstrap{
         $routes['page_relatar_problema2'] = array(
             'route' => '/relatar-problema2',
             'controller' => 'RelatosController',
-            'action' => 'ma2',
+            'action' => 'relatarProblema2',
         );
         $routes['registrar_relato'] = array(
             'route' => '/registrar-relato',
