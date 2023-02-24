@@ -2,7 +2,7 @@
 
 # Projeto VetsLine
 ## Descrição:
-Este é um projeto feito para uma empresa fictía, que seria um veterinario 24h, onde o usuario pode entrar, podendo fazer o login, e relatar algum problema de saúde que seu pet esteja passando, e em seguinte esperar a resposta do algum veterinario cadastrado no site.
+Este é um projeto feito para uma empresa fictía, que seria um veterinario 24h, onde o usuario pode entrar, podendo fazer o login, e relatar algum problema de saúde que seu pet esteja passando, e em seguida esperar a resposta de algum veterinario cadastrado no site.
 
 ### Tecnologias utilizadas:
 * HTML
