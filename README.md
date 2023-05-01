@@ -17,6 +17,6 @@ Este é um projeto feito para uma empresa fictía, que seria um veterinario 24h,
 * Site responsivo, usando HTML, CSS, JavaScript.
 ##### Back-End:
 * Site bem estruturado, usando o padrão de arquitetura MVC.
-* Ações de CRUD ao banco de dados no MySQL, utilizando o PDO no PHP (o SGBD usado foi o phpMyAdmin).
+* Ações de CRUD ao banco de dados no MySQL, utilizando o PDO do PHP.
 * codigos orientados à objetos.
 * utilização do composer para fazer o autoload dos arquivos.
